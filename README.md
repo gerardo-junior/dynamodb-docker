@@ -1,1 +1,1 @@
-# Docker image of dynamodb-admin
+# Docker image of dynamodb and dynamodb-admin
