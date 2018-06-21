@@ -1,5 +1,3 @@
-# Use JDK 7. I tried alpine, but all calls to dynamo then fail silently...
-# FROM openjdk:7-jre-alpine
 FROM openjdk:8-jre
 LABEL Maintainer="Gerardo Junior <me@gerardo-junior.com>"
 
