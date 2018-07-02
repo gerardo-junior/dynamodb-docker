@@ -2,7 +2,7 @@ FROM openjdk:8-jre
 LABEL Maintainer="Gerardo Junior <me@gerardo-junior.com>"
 
 ENV DYNAMODB_VERSION=latest
-ENV DYNAMODB_PORT=8000
+ENV DYNAMODB_PORT=80
 ENV DYNAMODB_PATH=/opt/dynamodb
 ENV JAVA_OPTS=
 
@@ -20,6 +20,6 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 WORKDIR $DYNAMODB_PATH
 VOLUME ["/run/dynamodb"]
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-EXPOSE 8000
+EXPOSE $DYNAMODB_PORT
 
 CMD ["--sharedDb", "-dbPath", "/run/dynamodb"]
