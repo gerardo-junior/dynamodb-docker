@@ -16,7 +16,6 @@ RUN set -xe && \
     ln -s /opt/dynamodbdump/dynamodump.py /usr/local/bin/dynamodump && \
     ln -s /opt/dynamodbdump/dump /var/dump
 
-
 RUN npm install dynamodb-admin -g
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
