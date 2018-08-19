@@ -15,7 +15,7 @@ RUN set -xe && \
     pip install -r requirements.txt && \
     chmod +x /opt/dynamodbdump/dynamodump.py && \
     ln -s /opt/dynamodbdump/dynamodump.py /usr/bin/dynamodump && \
-    ln -s /opt/dynamodbdump/dump /run/dump
+    ln -s /opt/dynamodbdump/dump /var/dump
 
 RUN npm install dynamodb-admin -g
 
