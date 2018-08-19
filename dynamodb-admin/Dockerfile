@@ -1,5 +1,6 @@
 FROM node:6-alpine
 
+ARG DYNAMODBDUMP_VERSION=1.1.4
 ENV DYNAMO_ENDPOINT=
 
 RUN apk --update add --virtual .persistent-deps \
@@ -9,12 +10,12 @@ RUN apk --update add --virtual .persistent-deps \
 RUN apk add ca-certificates wget && update-ca-certificates
 
 RUN set -xe && \
-    wget -qO- https://github.com/bchew/dynamodump/archive/v1.1.4.tar.gz | tar -xvz -C /opt/ && \
-    mv /opt/dynamodump-1.1.4 /opt/dynamodbdump && cd /opt/dynamodbdump && \
+    wget -qO- https://github.com/bchew/dynamodump/archive/v${DYNAMODBDUMP_VERSION}.tar.gz | tar -xvz -C /opt/ && \
+    mv /opt/dynamodump-${DYNAMODBDUMP_VERSION} /opt/dynamodbdump && cd /opt/dynamodbdump && \
     pip install -r requirements.txt && \
     chmod +x /opt/dynamodbdump/dynamodump.py && \
     ln -s /opt/dynamodbdump/dynamodump.py /usr/bin/dynamodump && \
-    ln -s /opt/dynamodbdump/dump /var/dump
+    ln -s /opt/dynamodbdump/dump/dump /var/dump
 
 RUN npm install dynamodb-admin -g
 
