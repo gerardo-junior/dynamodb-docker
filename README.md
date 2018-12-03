@@ -70,6 +70,11 @@ dynamodb-admin:
         - dynamodb
     depends_on:
         - dynamodb
+
+# (...)
+volumes:
+  dbdata:
+    name: bot-adminportal-dbdata
         
 ```
 
