@@ -54,7 +54,7 @@ Create the docker-compose.yml file  in your project folder with:
 dynamodb:
     image: 'gerardojunior/dynamodb:stable'
     volumes:
-        - type: volume
+    - type: volume
         source: dbdata
         target: /run/dynamodb
         volume:
@@ -74,7 +74,7 @@ dynamodb-admin:
 # (...)
 volumes:
   dbdata:
-    name: bot-adminportal-dbdata
+    name: dbdata
         
 ```
 
