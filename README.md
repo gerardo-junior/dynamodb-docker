@@ -8,9 +8,9 @@
     [+] TELEGRAM:     @MrGerardoJunior
 ```
 
-| dynamodb  | dynamodb-admin  |
+| master  | develop  |
 | :------------: | :------------: |
-| [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/)  |  https://hub.docker.com/r/gerardojunior/dynamodb-admin/ |
+| [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/) |  [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)  |
 
 
 ## Come on, do your tests
