@@ -4,7 +4,7 @@
     [+] AUTOR:        Gerardo Junior
     [+] SITE:         https://gerardo-junior.com
     [+] EMAIL:        me@gerardo-junior.com
-    [+] GITHUB:       https://github.com/gerardo-junior/docker-dynamodb
+    [+] GITHUB:       https://github.com/gerardo-junior/dynamodb-docker
     [+] TELEGRAM:     @MrGerardoJunior
 ```
 
@@ -26,7 +26,7 @@ to build the image you need install the [docker engine](https://www.docker.com/)
 
 *~ You can try building with different versions of software with docker args, for example: DYNAMODB_VERSION=latest ~*
 ```bash
-git clone https://github.com/gerardo-junior/docker-dynamodb.git
+git clone https://github.com/gerardo-junior/dynamodb-docker.git
 
 # dynamodb
 cd docker-dynamodb/dynamodb
