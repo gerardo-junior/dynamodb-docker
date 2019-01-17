@@ -19,7 +19,7 @@ ARG DYNAMODBDUMP_SOURCE_URL="https://github.com/bchew/dynamodump/archive"
 RUN set -xe && \
     wget ${DYNAMODBDUMP_SOURCE_URL}/v${DYNAMODBDUMP_VERSION}.tar.gz && \
     echo "${DYNAMODBDUMP_SHA256}  v${DYNAMODBDUMP_VERSION}.tar.gz" | sha256sum -c
-    
+
 RUN set -xe && \
     tar zxvf v${DYNAMODBDUMP_VERSION}.tar.gz && \
     mkdir -p /opt/dynamodbdump && \
