@@ -30,11 +30,10 @@ git clone https://github.com/gerardo-junior/dynamodb-docker.git
 
 # dynamodb
 cd docker-dynamodb/dynamodb
-docker build . --tag gerardojunior/dynamodb
+docker build https://github.com/gerardo-junior/dynamodb-docker.git#:dynamodb --tag gerardojunior/dynamodb-admin
 
 # dynamodb-admin
-cd docker-dynamodb/dynamodb-admin
-docker build . --tag gerardojunior/dynamodb-admin
+docker build https://github.com/gerardo-junior/dynamodb-docker.git#:dynamodb-admin --tag gerardojunior/dynamodb-admin
 ```
 ## How to use
 
