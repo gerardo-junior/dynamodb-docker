@@ -8,10 +8,6 @@
     [+] TELEGRAM:     @MrGerardoJunior
 ```
 
-| dynamodb  | dynamodb-admin  |
-| :------------: | :------------: |
-|  |  [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)  |
-
 ## dynamodb [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/)
 - [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb/Dockerfile)
   - [openjdk](https://openjdk.java.net/) 8
