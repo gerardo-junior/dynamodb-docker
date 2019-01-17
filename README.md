@@ -10,12 +10,14 @@
 
 ## dynamodb [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/)
 - [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb/Dockerfile)
-  - [openjdk](https://openjdk.java.net/) 8
-  - [dynamodb local version](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) 2018-04-11
+    - [library/openjdk](https://hub.docker.com/_/openjdk) 8-alpine
+      - [openjdk](https://openjdk.java.net/) 8
+    - [dynamodb local version](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) 2018-04-11
 
 ## dynamodb-admin [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)
 - [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb-admin/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb-admin/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb-admin/Dockerfile)
-  - [openjdk](https://openjdk.java.net/) 6.16.0
+  - [library/node](https://hub.docker.com/_/node) 6.16.0-alpine
+      - [nodejs](https://nodejs.org/) 6.16.0
   - [dynamodb-admin](https://github.com/aaronshaf/dynamodb-admin) 3.1.0
   - [dynamodbdump](https://github.com/bchew/dynamodump.git) 1.1.4
 
