@@ -18,6 +18,7 @@
 - [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb-admin/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb-admin/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb-admin/Dockerfile)
   - [library/node](https://hub.docker.com/_/node) 6.16.0-alpine
       - [nodejs](https://nodejs.org/) 6.16.0
+      - [yarn](https://yarnpkg.com/) 1.12.3
   - [dynamodb-admin](https://github.com/aaronshaf/dynamodb-admin) 3.1.0
   - [dynamodbdump](https://github.com/bchew/dynamodump.git) 1.1.4
 
