@@ -65,7 +65,7 @@ dynamodb:
 dynamodb-admin:
     image: gerardojunior/dynamodb-admin:stable
     environment:
-        - 'DYNAMO_ENDPOINT=http://dynamodb'
+        - DYNAMO_ENDPOINT=http://dynamodb
     ports:
         - '8001:8001' # Web admin
     links:
