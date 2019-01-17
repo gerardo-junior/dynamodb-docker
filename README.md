@@ -10,8 +10,18 @@
 
 | dynamodb  | dynamodb-admin  |
 | :------------: | :------------: |
-| [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/) |  [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)  |
+|  |  [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)  |
 
+## dynamodb [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb/)
+- [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb/Dockerfile)
+  - [openjdk](https://openjdk.java.net/) 8
+  - [dynamodb local version](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) 2018-04-11
+
+## dynamodb-admin [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/gerardojunior/dynamodb-admin/)
+- [stable](https://github.com/gerardo-junior/dynamodb-docker/blob/master/dynamodb-admin/Dockerfile), [latest](https://github.com/gerardo-junior/dynamodb-docker/blob/develop/dynamodb-admin/Dockerfile), [1.0.0](https://github.com/gerardo-junior/dynamodb-docker/blob/1.0.0/dynamodb-admin/Dockerfile)
+  - [openjdk](https://openjdk.java.net/) 6.16.0
+  - [dynamodb-admin](https://github.com/aaronshaf/dynamodb-admin) 3.1.0
+  - [dynamodbdump](https://github.com/bchew/dynamodump.git) 1.1.4
 
 ## Come on, do your tests
 
@@ -26,10 +36,7 @@ to build the image you need install the [docker engine](https://www.docker.com/)
 
 *~ You can try building with different versions of software with docker args, for example: DYNAMODB_VERSION=latest ~*
 ```bash
-git clone https://github.com/gerardo-junior/dynamodb-docker.git
-
 # dynamodb
-cd docker-dynamodb/dynamodb
 docker build https://github.com/gerardo-junior/dynamodb-docker.git#:dynamodb --tag gerardojunior/dynamodb-admin
 
 # dynamodb-admin
@@ -51,7 +58,7 @@ Create the docker-compose.yml file  in your project folder with:
 # (...)
 
 dynamodb:
-    image: 'gerardojunior/dynamodb:stable'
+    image: gerardojunior/dynamodb:stable
     volumes:
     - type: volume
         source: dbdata
@@ -60,7 +67,7 @@ dynamodb:
             nocopy: true
 
 dynamodb-admin:
-    image: 'gerardojunior/dynamodb-admin:stable'
+    image: gerardojunior/dynamodb-admin:stable
     environment:
         - 'DYNAMO_ENDPOINT=http://dynamodb'
     ports:
@@ -73,18 +80,18 @@ dynamodb-admin:
 # (...)
 volumes:
   dbdata:
-    name: dbdata
+    name: dynamodb-dbdata
         
 ```
 
 ## How to enter dynamodb-admin image shell
  
 ```bash
-docker run -it --rm gerardojunior/dynamodb-admin:stable /bin/sh
+docker run -it --rm gerardojunior/dynamodb-admin:stable sh
 
 # or with docker-compose
 
-docker-compose run dynamodb-admin /bin/sh
+docker-compose run dynamodb-admin sh
 ```
 
 ### License  
