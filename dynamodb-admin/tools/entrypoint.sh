@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ -z "$1" ]]; then 
-    dynamodb-admin 
+    exec dynamodb-admin 
 else
     exec "$@"
 fi
